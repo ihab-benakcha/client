@@ -51,7 +51,7 @@
      <input type="password" id="password" class="form-control" v-model="user.password" required>
 
           <div class="text-center py-4 mt-3">
-               <button class="btn btn-outline-purple" type="submit">Send<i class="far fa-paper-plane ml-2" @click="login" ></i></button>
+               <button class="btn btn-outline-purple" type="submit">Send<i class="far fa-paper-plane ml-2"  ></i></button>
           </div>
      </form>
 
@@ -105,17 +105,7 @@
       }
     },
     methods:{
-      login:function(){
-                    axios.post("/auth/authenticate",this.user)    
-                        .then((response) => {    
-                            console.log("Logged in")    
-                            router.push("/enseignant")    
-                        })    
-                        .catch((errors) => {    
-                            console.log("Cannot log in")    
-                        })    
-                
-                }  
+     
                 
                 }   
             }    

@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import acceuil from '../acceuil'
+import auth from '../components/auth'
 import admin from '../components/admin'
 import etudiant from '../components/etudiant'
 import enseignant from '../components/enseignant'
+import acceuil from '../components/acceuil'
 
 
 Vue.use(Router)
@@ -15,6 +16,11 @@ export default new Router({
       path: '/',
       name: 'acceuil',
       component: acceuil
+    },
+    {
+      path: '/auth',
+      name: 'auth',
+      component: auth
     },
     {
       path: '/admin',
@@ -30,7 +36,8 @@ export default new Router({
       path: '/etudiant',
       name: 'etudiant',
       component: etudiant
-    }
+    },
+    
 
   ]
 })

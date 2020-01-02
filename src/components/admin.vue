@@ -10,7 +10,12 @@
             <mdb-nav-item  waves-fixed active><router-link to='/'>Home</router-link></mdb-nav-item>
             
           </mdb-navbar-nav>
-         
+         <mdb-navbar-nav right>
+            <mdb-form-inline >
+        
+      <mdb-btn outline="white" size="sm" class="my-0" type="submit">Logout</mdb-btn>
+    </mdb-form-inline>
+          </mdb-navbar-nav>
         </mdb-navbar-toggler>
       </mdb-container>
     </mdb-navbar>
@@ -165,7 +170,7 @@ import axios from 'axios';
       background-color: #424f95 !important;
     }
   .view {
-    background-image: url('11111.jpg');
+    background-image: url('./img/10.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

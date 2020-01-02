@@ -73,7 +73,7 @@
       background-color: #424f95 !important;
     }
   .view {
-    background-image: url('11111.jpg');
+    background-image: url('./img/8.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

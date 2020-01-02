@@ -136,7 +136,7 @@
     }
   
   .view {
-    background-image: url('11111.jpg');
+    background-image: url('./img/7.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

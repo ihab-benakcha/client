@@ -13,7 +13,20 @@
           <!--Search form -->
           <mdb-navbar-nav right>
             
-     <mdb-nav-item  waves-fixed active><button ><router-link to='/admin'>admin</router-link></button></mdb-nav-item>
+     <form class="form-inline">
+  <label class="sr-only" for="inlineFormInputName2">admin</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="admin email" v-model="admin.email">
+
+  <label class="sr-only" for="inlineFormInputGroupUsername2">password</label>
+  <div class="input-group mb-2 mr-sm-2">
+    
+    <input type="password" class="form-control" id="inlineFormInputGroupUsername2" placeholder="password" v-model="admin.password">
+  </div>
+
+  
+
+  <button type="submit" class="btn btn-primary mb-2" @click="adminLogin">login</button>
+</form>
    
           </mdb-navbar-nav>
           <!--/.Search form -->
@@ -51,7 +64,7 @@
      <input type="password" id="password" class="form-control" v-model="user.password" required>
 
           <div class="text-center py-4 mt-3">
-               <button class="btn btn-outline-purple" type="submit">Send<i class="far fa-paper-plane ml-2"  ></i></button>
+               <button class="btn btn-outline-purple" type="submit">Send<i class="far fa-paper-plane ml-2" @click="login" ></i></button>
           </div>
      </form>
 
@@ -76,7 +89,8 @@
 </template>
 <script>
   import { mdbContainer, mdbRow, mdbCol, mdbNavbar, mdbNavbarToggler, mdbNavbarNav, mdbNavItem, mdbInput, mdbView, mdbMask, mdbBtn, mdbNavbarBrand, mdbFormInline} from 'mdbvue';
-  import axios from "axios"         
+  import axios from "axios"  
+  import router from "../router/index"       
   export default {
     name: 'AppPage',
     components: {
@@ -101,17 +115,38 @@
         user:{
           email: '',
           password: ''
+        },
+        admin:{
+          email: '',
+          password: ''
         }
       }
     },
     methods:{
-     
+      login:function(){
+                    axios.post("/auth/authenticate",this.user)    
+                        .then((response) => {    
+                            console.log("Logged in")    
+                            router.push("/enseignant")    
+                        })    
+                        .catch((errors) => {    
+                            console.log("Cannot log in")    
+                        })    
+                
+                } ,
+      adminLogin(){
+        if((this.admin.email==="admin@ecole.dz") && (this.admin.password==="admin2020")){
+        router.push('/admin')
+        }else{
+          alert('email / password incorrect')
+        }
+      }
                 
                 }   
             }    
    
 </script>
-<style>
+<style scoped>
   .navbar .md-form {
     margin: 0;
   }
@@ -121,7 +156,7 @@
     }
   
   .view {
-    background-image: url('11111.jpg');
+    background-image: url('./img/9.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

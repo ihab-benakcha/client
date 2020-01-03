@@ -151,7 +151,7 @@ import axios from 'axios';
     }
   }
 </script>
-<style>
+<style scoped>
   .navbar .md-form {
     margin: 0;
   }

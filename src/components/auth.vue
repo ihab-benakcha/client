@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <!--Navbar-->
+
     <mdb-navbar :color="'secondary'" position="top" dark href="#" transparent scrolling>
       <mdb-container>
         <mdb-navbar-brand href="#"><strong>Ecole</strong></mdb-navbar-brand>
@@ -10,7 +10,7 @@
             <mdb-nav-item  waves-fixed active><router-link to='/'>Home</router-link></mdb-nav-item>
             
           </mdb-navbar-nav>
-          <!--Search form -->
+
           <mdb-navbar-nav right>
             
      <form class="form-inline">
@@ -29,12 +29,12 @@
 </form>
    
           </mdb-navbar-nav>
-          <!--/.Search form -->
+
         </mdb-navbar-toggler>
       </mdb-container>
     </mdb-navbar>
-    <!--/.Navbar-->
-    <!--ViewWrapper-->
+
+
     <mdb-view>
       <mdb-mask class=" d-flex justify-content-center align-items-center">
         <mdb-container>
@@ -50,7 +50,7 @@
              <mdb-col md="6" xl="5" class="mb-4 animated fadeInRight ">
               <mdb-card id="classic-card">
 
-  <!-- Card -->
+
   <div class="card mx-xl-5 gradient">
 
    
@@ -69,10 +69,10 @@
      </form>
 
     </div>
-    <!-- Card body -->
+
 
   </div>
-  <!-- Card -->
+
 
               </mdb-card>
             </mdb-col>
@@ -82,7 +82,7 @@
         </mdb-container>
       </mdb-mask>
     </mdb-view>
-    <!--/.ViewWrapper-->
+
 
     
   </div>
@@ -156,7 +156,7 @@
     }
   
   .view {
-    background-image: url('./img/9.jpeg');
+    background-image: url('./img/11111.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

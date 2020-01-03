@@ -1,7 +1,6 @@
 
 <template>
   <div>
-    <!--Navbar-->
     <mdb-navbar :color="'secondary'" position="top" dark href="#" transparent scrolling>
       <mdb-container>
         <mdb-navbar-brand href="#"><strong>Ecole</strong></mdb-navbar-brand>
@@ -11,7 +10,6 @@
             <mdb-nav-item  waves-fixed active><router-link to='/auth'>auth</router-link></mdb-nav-item>
             
           </mdb-navbar-nav>
-          <!--Search form -->
           <mdb-navbar-nav right>
             
       <form class="form-inline">
@@ -30,12 +28,11 @@
 </form>
    
           </mdb-navbar-nav>
-          <!--/.Search form -->
+         
         </mdb-navbar-toggler>
       </mdb-container>
     </mdb-navbar>
-    <!--/.Navbar-->
-    <!--ViewWrapper-->
+   
     
       <mdb-mask class=" d-flex justify-content-center align-items-center">
         <div>
@@ -103,7 +100,7 @@
         </div>
       </mdb-mask>
   
-    <!--/.ViewWrapper-->
+    
 
     
   </div>

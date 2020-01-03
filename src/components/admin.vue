@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <!--Navbar-->
+
     <mdb-navbar :color="'secondary'" position="top" dark href="#" transparent scrolling>
       <mdb-container>
         <mdb-navbar-brand href="#"><strong>Ecole</strong></mdb-navbar-brand>
@@ -19,45 +19,35 @@
         </mdb-navbar-toggler>
       </mdb-container>
     </mdb-navbar>
-    <!--/.Navbar-->
-    <!--ViewWrapper-->
+
+
     <mdb-view>
       <mdb-mask class=" d-flex justify-content-center align-items-center">
         <mdb-container>
           <mdb-row>
               <div class="white-text text-center text-md-left col-md-6 mt-xl-5 mb-5 animated fadeInLeft">
-                <h1 class="h1-responsive font-weight-bold mt-sm-3">Choisir le personnel a inscrire</h1>
+                <h1 class="h1-responsive font-weight-bold mt-sm-3">Choisir l'action a effectuer</h1>
                 <hr class="hr-light"/>
                 
                 <template>
   <div>
-    <!-- Default inline 1-->
+
     <div class="custom-control custom-radio custom-control-inline">
       <input type="radio" name="radioInline" class="custom-control-input" id="defaultInline1" value='form2' v-model="choix">
-      <label class="custom-control-label" for="defaultInline1">etudiant </label>
+      <label class="custom-control-label" for="defaultInline1">Ajouter un etudiant </label>
     </div>
 
-    <!-- Default inline 2-->
+
     <div class="custom-control custom-radio custom-control-inline">
       <input type="radio" name="radioInline" class="custom-control-input" id="defaultInline2" value='form1' v-model="choix" >
-      <label class="custom-control-label" for="defaultInline2">enseignant</label>
+      <label class="custom-control-label" for="defaultInline2">Ajouter un  enseignant</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" name="radioInline" class="custom-control-input" id="defaultInline3" value='form3'  v-model="choix" >
+      <label class="custom-control-label" for="defaultInline3">Ajouter module</label>
     </div>
 
-  <mdb-container class="mt-5">
-    <form>
-      <div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="module">module</label>
-          <input type="text" class="module" id="module"   required v-model="mod.nom">
-          <label for="enseignant">enseignant</label>
-          <select class="form-control">
-            <option v-for="ens in enseignants" :key="ens" @click="modifier(ens)">{{ens.nom}} {{ens.prenom}}</option>
-          </select>
-        </div>
-      </div>
-      <mdb-btn type="submit" @click="ajouter_module">Ajouter module</mdb-btn>
-    </form>
-  </mdb-container>
+  
 
     
   </div>
@@ -74,13 +64,13 @@
 
 
        <component :is="choix"></component>
-        <!-- Default form subscription -->
+
 
     </div>
-    <!-- Card body -->
+
 
   </div>
-  <!-- Card -->
+
 
               </mdb-card>
             </mdb-col>
@@ -90,7 +80,7 @@
         </mdb-container>
       </mdb-mask>
     </mdb-view>
-    <!--/.ViewWrapper-->
+
 
     
   </div>
@@ -99,6 +89,8 @@
   import { mdbContainer, mdbRow, mdbCol, mdbNavbar, mdbNavbarToggler, mdbNavbarNav, mdbNavItem, mdbInput, mdbView, mdbMask, mdbBtn, mdbNavbarBrand, mdbFormInline} from 'mdbvue';
   import form1 from './form1.vue'
   import form2 from './form2.vue'
+  import form3 from './form3.vue'
+
 import axios from 'axios';
   export default {
     name: 'AppPage',
@@ -116,6 +108,7 @@ import axios from 'axios';
       mdbBtn,
       mdbNavbarBrand,
       mdbFormInline,
+      'form3':form3,
       'form2':form2,
       'form1':form1,
       
@@ -128,7 +121,8 @@ import axios from 'axios';
           id_enseignant:''
         },
        
-        enseignants:[]
+        enseignants:[],
+        diplay: true
       }
     },
     methods:{
@@ -170,7 +164,7 @@ import axios from 'axios';
       background-color: #424f95 !important;
     }
   .view {
-    background-image: url('./img/10.jpeg');
+    background-image: url('./img/11111.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

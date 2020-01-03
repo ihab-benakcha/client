@@ -13,20 +13,12 @@
 
           <mdb-navbar-nav right>
             
-     <form class="form-inline">
-  <label class="sr-only" for="inlineFormInputName2">admin</label>
-  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="admin email" v-model="admin.email">
-
-  <label class="sr-only" for="inlineFormInputGroupUsername2">password</label>
-  <div class="input-group mb-2 mr-sm-2">
-    
-    <input type="password" class="form-control" id="inlineFormInputGroupUsername2" placeholder="password" v-model="admin.password">
-  </div>
+     
 
   
 
-  <button type="submit" class="btn btn-primary mb-2" @click="adminLogin">login</button>
-</form>
+   <button type="submit" class="btn  mb-2" ><router-link to="/admin">admin</router-link></button>
+
    
           </mdb-navbar-nav>
 
@@ -134,13 +126,7 @@
                         })    
                 
                 } ,
-      adminLogin(){
-        if((this.admin.email==="admin@ecole.dz") && (this.admin.password==="admin2020")){
-        router.push('/admin')
-        }else{
-          alert('email / password incorrect')
-        }
-      }
+      
                 
                 }   
             }    

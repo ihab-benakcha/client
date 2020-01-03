@@ -10,12 +10,7 @@
             <mdb-nav-item  waves-fixed active><router-link to='/'>Home</router-link></mdb-nav-item>
             
           </mdb-navbar-nav>
-         <mdb-navbar-nav right>
-            <mdb-form-inline >
-        
-      <mdb-btn outline="white" size="sm" class="my-0" type="submit">Logout</mdb-btn>
-    </mdb-form-inline>
-          </mdb-navbar-nav>
+         
         </mdb-navbar-toggler>
       </mdb-container>
     </mdb-navbar>

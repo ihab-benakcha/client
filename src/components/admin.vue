@@ -52,7 +52,7 @@
               <mdb-card id="classic-card">
 
   <!-- Card -->
-  <div class="card mx-xl-5 gradient">
+  <div class="card  gradient">
 
    
     <div class="card-body">

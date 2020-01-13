@@ -6,10 +6,9 @@
         <mdb-navbar-brand href="#"><strong>Ecole</strong></mdb-navbar-brand>
         <mdb-navbar-toggler style="max-width: 1140px">
           <mdb-navbar-nav left>
-           <mdb-nav-item  waves-fixed active><router-link to='/'><mdb-btn color="indigo" type="submit"  >Home</mdb-btn></router-link></mdb-nav-item>
-           <mdb-nav-item  waves-fixed active><mdb-btn color="indigo" type="submit" @click="dot" >yosh</mdb-btn></mdb-nav-item>
+           <mdb-nav-item  waves-fixed active><router-link to='/'><mdb-btn color="indigo" type="submit" >Home</mdb-btn></router-link></mdb-nav-item>
             <mdb-nav-item  waves-fixed active><router-link to='/auth'><mdb-btn color="indigo" type="submit"  >authentifier</mdb-btn ></router-link></mdb-nav-item>
-             <mdb-dropdown>
+                         <mdb-dropdown>
     <mdb-dropdown-toggle slot="toggle" color="indigo" class="mt-3 ml-2">Ecole</mdb-dropdown-toggle>
     <mdb-dropdown-menu>
       <mdb-dropdown-item> <router-link to='/presentation'>Prsentation</router-link></mdb-dropdown-item>
@@ -18,10 +17,9 @@
      
     </mdb-dropdown-menu>
   </mdb-dropdown>
-           
           </mdb-navbar-nav>
           
-          
+         
         </mdb-navbar-toggler>
       </mdb-container>
     </mdb-navbar>
@@ -31,63 +29,37 @@
         <div>
         <template>
   <mdb-container class="bl">
-    <h1 class="h1-responsive font-weight-bold text-center my-5">Recent posts</h1>
+    <h1 class="h1-responsive font-weight-bold text-center my-5">Formation</h1>
     
     <mdb-row>
-      <mdb-col lg="5" xl="4">
-        <mdb-view hover class="rounded z-depth-1-half mb-lg-0 mb-4">
-          <img class="img-fluid" src="./img/1.jpeg" alt="Sample image" />
-          <a>
-            <mdb-mask overlay="white-slight" waves/>
-          </a>
-        </mdb-view>
-      </mdb-col>
-      <mdb-col lg="7" xl="8">
-        <h2 class="font-weight-bold mb-3 p-0">
-          <strong>Debut de cours</strong>
-        </h2>
-        <h3 class="dark-grey-text">Afin d'assurer le bon deroulement des études, Nous informons tous les niveaux que les cours se commencent la semaine prochaine</h3>
-        
-          
-      </mdb-col>
-    </mdb-row>
-    <hr class="my-5" />
-    <mdb-row>
-      <mdb-col lg="5" xl="4">
-        <mdb-view hover class="rounded z-depth-1-half mb-lg-0 mb-4">
-          <img class="img-fluid" src="./img/3.jpeg" alt="Sample image" />
-          <a>
-            <mdb-mask overlay="white-slight" waves/>
-          </a>
-        </mdb-view>
-      </mdb-col>
-      <mdb-col lg="7" xl="8">
-        <h2 class="font-weight-bold mb-3 p-0">
-          <strong>Nouveaux ouvrages</strong>
-        </h2>
-        <h3 class="dark-grey-text">Nous informons nos etudiants que des nouveaux ouvrages ont etait ajouter a la bibliothèque, Veuillez consulter la bibliothèque et nous somme toujours à l'écoute de votre besoins</h3>
-        
-          
-      </mdb-col>
-    </mdb-row>
-    <hr class="my-5" />
-    <mdb-row>
-      <mdb-col lg="5" xl="4">
-        <mdb-view hover class="rounded z-depth-1-half mb-lg-0 mb-4">
-          <img class="img-fluid" src="./img/4.jpeg" alt="Sample image" />
-          <a>
-            <mdb-mask overlay="white-slight" waves/>
-          </a>
-        </mdb-view>
-      </mdb-col>
-      <mdb-col lg="7" xl="8">
-        <h2 class="font-weight-bold mb-3 p-0">
-          <strong>Thèmes des PFE</strong>
-        </h2>
-        <h3 class="dark-grey-text">Nous informons les étudiants de 5 ème année de déposer leurs thème de PFE au niveau de l'administration </h3>
+      
+      <mdb-col lg="5" xl="5">
        
+        <h3 class="dark-grey-text">L'École nationaleSupérieure d'Informatique forme des ingénieurs d'État en informatique. La scolarité dure cinq ans et est répartie en trois périodes :</h3>
+        
+          
+      </mdb-col>
+      <mdb-col lg="7" xl="7">
+       
+          <img class="img-fluid" src="./img/CPI.jpg" alt="Sample image" />
+         
+      </mdb-col>
+   
+     
+      <mdb-col >
+       
+        <h3 class="dark-grey-text">§Deux années de classes préparatoires intégrées (CPI) : deux années durant lesquelles sont enseignées les connaissances de base devant être maîtrisées par un ingénieur avant d’aborder les connaissances plus spécifiques. L’accès aux classes supérieures est subordonné à la réussite à un concours dont les conditions sont fixées chaque année par arrêté de Monsieur le Ministre de l’Enseignement Supérieur. Ce concours est ouvert, sous conditions, aux étudiants issus de certaines filières enseignées dans les autres établissements universitaires.
+
+§Une année de socle commun supérieur (SCS) : les étudiants reçus au concours, intègrent la première année du cycle supérieur dénommée année de socle commun supérieur.
+
+§Deux années de spécialité (4ème + 5ème année): l’École offre à ses étudiants trois spécialités qui sont dispensées pour le cycle ingénieur (SIT: Systèmes d’Information et Technologie, SIQ: Systèmes InformatiQues et SIL: Systèmes et Ingénierie du Logiciel). Le choix se fait à la fin de la 1ère année du cycle supérieur sur la base des notes obtenues durant le socle commun et des places disponibles par spécialité.
+
+§La cinquième année : elle consiste en un stage pratique de 10 à 12 mois. L'étudiant est tenu, durant cette période, de réaliser un projet informatique dans lequel il devra mettre en pratique les notions et les concepts appris durant les quatre années théoriques.</h3>
+        
+          
       </mdb-col>
     </mdb-row>
+   
   </mdb-container>
 </template>  
         </div>
@@ -100,8 +72,7 @@
 </template>
 <script>
   import { mdbContainer, mdbRow, mdbCol, mdbNavbar, mdbNavbarToggler, mdbNavbarNav, mdbNavItem, mdbInput, mdbView, mdbMask, mdbBtn, mdbNavbarBrand, mdbFormInline} from 'mdbvue';
-    import { mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle } from 'mdbvue';
-    import router from '../router'
+   import { mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle } from 'mdbvue';
   import axios from "axios"         
   export default {
     name: 'AppPage',
@@ -118,8 +89,8 @@
       mdbMask,
       mdbBtn,
       mdbNavbarBrand,
-      mdbFormInline, mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle
-      
+      mdbFormInline,
+      mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle
     },
     data(){
       return {
@@ -141,10 +112,7 @@
                             console.log("Cannot log in")    
                         })    
                 
-                },
-      dot:function(){
-        router.push('/mot')
-      }            
+                }  
                 
                 }   
             }    

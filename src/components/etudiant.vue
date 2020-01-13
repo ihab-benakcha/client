@@ -6,15 +6,25 @@
         <mdb-navbar-brand href="#"><strong>Ecole</strong></mdb-navbar-brand>
         <mdb-navbar-toggler style="max-width: 1140px">
           <mdb-navbar-nav left>
-           <mdb-nav-item waves-fixed active><router-link to='/'>Home</router-link></mdb-nav-item>
-            
+           <mdb-nav-item  waves-fixed active><router-link to='/'><mdb-btn color="indigo" type="submit" >Home</mdb-btn></router-link></mdb-nav-item>
+            <mdb-nav-item  waves-fixed active><router-link to='/auth'><mdb-btn color="indigo" type="submit"  >authentifier</mdb-btn ></router-link></mdb-nav-item>
+                         <mdb-dropdown>
+    <mdb-dropdown-toggle slot="toggle" color="indigo" class="mt-3 ml-2">Ecole</mdb-dropdown-toggle>
+    <mdb-dropdown-menu>
+      <mdb-dropdown-item> <router-link to='/presentation'>Prsentation</router-link></mdb-dropdown-item>
+      <mdb-dropdown-item><router-link to='/formation'>formation</router-link></mdb-dropdown-item>
+      <mdb-dropdown-item><router-link to='/mot'>mot de directeur</router-link></mdb-dropdown-item>
+     
+    </mdb-dropdown-menu>
+  </mdb-dropdown>
           </mdb-navbar-nav>
            <mdb-navbar-nav right>
             <mdb-form-inline >
         
-      <mdb-btn outline="white" size="sm" class="my-0" type="submit">Logout</mdb-btn>
+      <mdb-btn color="indigo" type="submit" >logout</mdb-btn>
     </mdb-form-inline>
           </mdb-navbar-nav>
+          
          </mdb-navbar-toggler>
       </mdb-container>
     </mdb-navbar>
@@ -36,7 +46,7 @@
 </template>
 <script>
   import { mdbContainer, mdbRow, mdbCol, mdbNavbar, mdbNavbarToggler, mdbNavbarNav, mdbNavItem, mdbInput, mdbView, mdbMask, mdbBtn, mdbNavbarBrand, mdbFormInline} from 'mdbvue';
-  
+  import { mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle } from 'mdbvue';
   export default {
     name: 'AppPage',
     components: {
@@ -53,7 +63,7 @@
       mdbBtn,
       mdbNavbarBrand,
       mdbFormInline,
-      
+      mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle
       
     },
     data(){
@@ -61,7 +71,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
   .navbar .md-form {
     margin: 0;
   }

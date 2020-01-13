@@ -7,14 +7,23 @@
         <mdb-navbar-brand href="#"><strong>Ecole</strong></mdb-navbar-brand>
         <mdb-navbar-toggler style="max-width: 1140px">
           <mdb-navbar-nav left>
-            <mdb-nav-item waves-fixed active><router-link to='/'>Home</router-link></mdb-nav-item>
-            
+<mdb-nav-item  waves-fixed active><router-link to='/'><mdb-btn color="indigo" type="submit" >Home</mdb-btn></router-link></mdb-nav-item>
+            <mdb-nav-item  waves-fixed active><router-link to='/auth'><mdb-btn color="indigo" type="submit"  >authentifier</mdb-btn ></router-link></mdb-nav-item>
+                         <mdb-dropdown>
+    <mdb-dropdown-toggle slot="toggle" color="indigo" class="mt-3 ml-2">Ecole</mdb-dropdown-toggle>
+    <mdb-dropdown-menu>
+      <mdb-dropdown-item> <router-link to='/presentation'>Prsentation</router-link></mdb-dropdown-item>
+      <mdb-dropdown-item><router-link to='/formation'>formation</router-link></mdb-dropdown-item>
+      <mdb-dropdown-item><router-link to='/mot'>mot de directeur</router-link></mdb-dropdown-item>
+     
+    </mdb-dropdown-menu>
+  </mdb-dropdown>
           </mdb-navbar-nav>
 
           <mdb-navbar-nav right>
             <mdb-form-inline >
         
-      <mdb-btn outline="white" size="sm" class="my-0" type="submit">Logout</mdb-btn>
+      <mdb-btn color="indigo" type="submit" >logout</mdb-btn>
     </mdb-form-inline>
           </mdb-navbar-nav>
          </mdb-navbar-toggler>
@@ -45,7 +54,7 @@
           
           <input type="text" name="" id="" v-model="etudiant.note">
         
-          <button type="button" class="btn btn-outline-indigo btn-sm m-0" @click="enregistrer(etudiant)">enregistrer</button>
+          <button type="button" class="btn btn-outline-indigo btn-sm m-0" @click="enregistre(etudiant)">enregistrer</button>
         </td>
       </tr>
     </tbody>
@@ -63,6 +72,7 @@
 </template>
 <script>
   import { mdbContainer, mdbRow, mdbCol, mdbNavbar, mdbNavbarToggler, mdbNavbarNav, mdbNavItem, mdbInput, mdbView, mdbMask, mdbBtn, mdbNavbarBrand, mdbFormInline} from 'mdbvue';
+  import { mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle } from 'mdbvue';
   import axios from 'axios'
   
   export default {
@@ -80,13 +90,64 @@
       mdbBtn,
       mdbNavbarBrand,
       mdbFormInline,
-     
+      mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle
       
     },
      data(){
       return{
         
-        list:[]
+        list:[
+          {
+            nom: 'a',
+            prenom: 'sdsdsds',
+            id: '1'
+          },
+                    {
+            nom: 'sdsd',
+            prenom: 'sdsdsds',
+            id: '1'
+          },
+                    {
+            nom: 'sdsd',
+            prenom: 'sdsdsds',
+            id: '1'
+          },
+                    {
+            nom: 'sdsd',
+            prenom: 'sdsdsds',
+            id: '1'
+          },
+                    {
+            nom: 'sdsd',
+            prenom: 'sdsdsds',
+            id: '1'
+          },
+                    {
+            nom: 'sdsd',
+            prenom: 'sdsdsds',
+            id: '1'
+          },
+                    {
+            nom: 'sdsd',
+            prenom: 'sdsdsds',
+            id: '1'
+          },
+                    {
+            nom: 'sdsd',
+            prenom: 'sdsdsds',
+            id: '1'
+          },
+                    {
+            nom: 'sdsd',
+            prenom: 'sdsdsds',
+            id: '1'
+          },
+                    {
+            nom: 'sdsd',
+            prenom: 'sdsdsds',
+            id: '1'
+          },
+        ]
     }},
     methods:{
       enregistrer:function(etudiant){
@@ -116,6 +177,9 @@
                         router.push("/")    
                     })    
             },
+            enregistre: function(etudiant){
+              alert(etudiant.nom)
+            }
     },
     mounted(){
       this.getListEtudiant()

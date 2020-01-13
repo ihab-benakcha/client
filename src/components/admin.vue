@@ -4,24 +4,44 @@
 
     <mdb-navbar :color="'secondary'" position="top" dark href="#" transparent scrolling>
       <mdb-container>
-        <mdb-navbar-brand href="#"><strong>Ecole</strong></mdb-navbar-brand>
+        <mdb-navbar-brand href="#"><strong>Esi</strong></mdb-navbar-brand>
         <mdb-navbar-toggler style="max-width: 1140px">
           <mdb-navbar-nav left>
-            <mdb-nav-item  waves-fixed active><router-link to='/'>Home</router-link></mdb-nav-item>
+            <mdb-nav-item  waves-fixed active><router-link to='/'><mdb-btn color="indigo" type="submit" >Home</mdb-btn></router-link></mdb-nav-item>
+            <mdb-nav-item  waves-fixed active><router-link to='/auth'><mdb-btn color="indigo" type="submit"  >authentifier</mdb-btn ></router-link></mdb-nav-item>
+                       <mdb-dropdown>
+    <mdb-dropdown-toggle slot="toggle" color="indigo" class="mt-3 ml-2">Ecole</mdb-dropdown-toggle>
+    <mdb-dropdown-menu>
+      <mdb-dropdown-item> <router-link to='/presentation'>Prsentation</router-link></mdb-dropdown-item>
+      <mdb-dropdown-item><router-link to='/formation'>formation</router-link></mdb-dropdown-item>
+      <mdb-dropdown-item><router-link to='/mot'>mot de directeur</router-link></mdb-dropdown-item>
+     
+    </mdb-dropdown-menu>
+  </mdb-dropdown>
+
             
           </mdb-navbar-nav>
-         
+         <mdb-navbar-nav right>
+            
+     
+
+  
+
+      <mdb-btn color="indigo" type="submit" >logout</mdb-btn>
+
+   
+          </mdb-navbar-nav>
         </mdb-navbar-toggler>
       </mdb-container>
     </mdb-navbar>
 
 
     <mdb-view>
-      <mdb-mask class=" d-flex justify-content-center align-items-center">
+      <mdb-mask class=" d-flex justify-content-center ">
         <mdb-container>
           <mdb-row>
-              <div class="white-text text-center text-md-left col-md-6 mt-xl-5 mb-5 animated fadeInLeft">
-                <h1 class="h1-responsive font-weight-bold mt-sm-3">Choisir l'action a effectuer</h1>
+              <div class="black-text text-center text-lg-left col-md-6  animated fadeInLeft mt-5">
+                <h1 class="h1-responsive font-weight-bold mt-sm-5">Choisir l'action a effectuer</h1>
                 <hr class="hr-light"/>
                 
                 <template>
@@ -82,6 +102,7 @@
 </template>
 <script>
   import { mdbContainer, mdbRow, mdbCol, mdbNavbar, mdbNavbarToggler, mdbNavbarNav, mdbNavItem, mdbInput, mdbView, mdbMask, mdbBtn, mdbNavbarBrand, mdbFormInline} from 'mdbvue';
+  import { mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle } from 'mdbvue';
   import form1 from './form1.vue'
   import form2 from './form2.vue'
   import form3 from './form3.vue'
@@ -103,6 +124,7 @@ import axios from 'axios';
       mdbBtn,
       mdbNavbarBrand,
       mdbFormInline,
+      mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle,
       'form3':form3,
       'form2':form2,
       'form1':form1,
@@ -163,7 +185,7 @@ import axios from 'axios';
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: calc(100vh);
+    height: calc(150vh);
      
   }
   .gradient {
